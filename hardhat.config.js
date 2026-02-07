@@ -1,4 +1,5 @@
 require("dotenv").config();
+require("@nomicfoundation/hardhat-toolbox");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -15,7 +16,8 @@ module.exports = {
     hardhat: {
       forking: {
         url: process.env.BASE_RPC_URL || "https://mainnet.base.org",
-        enabled: !!process.env.BASE_RPC_URL,
+        enabled: true,
+        blockNumber: 25000000, // Pin block for consistent tests
       },
       chainId: 8453,
     },
