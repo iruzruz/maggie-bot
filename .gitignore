@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+lib/
+
+# Build artifacts
+out/
+cache/
+artifacts/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test artifacts
+coverage/
+coverage.json

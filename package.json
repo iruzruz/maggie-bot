@@ -1,0 +1,45 @@
+{
+  "name": "maggie-mev-bot",
+  "version": "1.0.0",
+  "description": "Flashloan MEV Arbitrage Bot for Base Mainnet",
+  "main": "bot/index.js",
+  "scripts": {
+    "start": "node bot/index.js",
+    "simulate": "node scripts/simulate.js",
+    "test": "forge test -vvv",
+    "test:fork": "forge test -vvv --fork-url http://127.0.0.1:8545",
+    "anvil": "anvil --fork-url $BASE_RPC_URL --chain-id 8453 --block-time 2",
+    "anvil:win": "anvil --fork-url %BASE_RPC_URL% --chain-id 8453 --block-time 2",
+    "deploy:fork": "forge script scripts/Deploy.s.sol --rpc-url http://127.0.0.1:8545 --broadcast",
+    "lint": "solhint 'contracts/**/*.sol'"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "viem": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ignition-ethers": "^3.0.7",
+    "@nomicfoundation/hardhat-network-helpers": "^3.0.3",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^3.0.9",
+    "@types/node": "^25.2.1",
+    "chai": "^6.2.2",
+    "ethers": "^6.16.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^2.3.0",
+    "solhint": "^4.0.0",
+    "solidity-coverage": "^0.8.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "mev",
+    "flashloan",
+    "arbitrage",
+    "base",
+    "defi"
+  ],
+  "author": "",
+  "license": "MIT"
+}
